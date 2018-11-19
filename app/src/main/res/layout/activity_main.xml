@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listHint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Enter names - comma separated"
+         />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:layout_below="@id/listHint"
+        android:id="@+id/list"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayList"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/list"/>
+
+    <ListView
+        android:id="@+id/mobile_list"
+        android:layout_width="match_parent"
+        android:layout_below="@id/displayList"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/getSecret"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/mobile_list"
+        android:text="Pair"/>
+
+</RelativeLayout>
